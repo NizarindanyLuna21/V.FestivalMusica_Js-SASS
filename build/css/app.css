@@ -370,3 +370,156 @@ img {
 body > section {
   padding: 10rem 0;
 }
+
+.header {
+  background-color: #4CB8B3;
+}
+.header .contenedor-header {
+  padding: 2rem;
+}
+@media (min-width: 768px) {
+  .header .contenedor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.header h1 {
+  text-align: center;
+  color: #FFFFFF;
+}
+@media (min-width: 768px) {
+  .header h1 {
+    margin: 0;
+    text-align: left;
+  }
+}
+.header .navegacion-principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  .header .navegacion-principal {
+    flex-direction: row;
+  }
+}
+.header .navegacion-principal a {
+  color: #FFFFFF;
+  font-size: 2.4rem;
+}
+.header .navegacion-principal a:hover {
+  color: #fdda00;
+}
+
+.video {
+  min-height: 50rem;
+  max-height: 70rem;
+  overflow: hidden;
+  position: relative;
+}
+.video .overlay {
+  background: linear-gradient(270deg, rgba(117, 47, 151, 0.4), rgba(93.6, 37.6, 120.8, 0.9));
+  inset: 0;
+  position: absolute;
+  display: flex;
+  align-items: center;
+}
+.video video {
+  display: block;
+  width: auto;
+}
+@media (min-width: 1200px) {
+  .video video {
+    width: 100%;
+  }
+}
+
+.contenido-video {
+  z-index: 10;
+}
+.contenido-video h1, .contenido-video p {
+  color: #FFFFFF;
+}
+.contenido-video h1 {
+  margin: 0;
+  font-size: 6rem;
+}
+.contenido-video p {
+  background-color: #F53756;
+  display: inline-block;
+  padding: 1rem 3rem;
+}
+
+.contenido {
+  display: grid;
+  gap: 3rem;
+}
+@media (min-width: 768px) {
+  .contenido {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.contenido-festival h2 {
+  margin-bottom: 0;
+}
+.contenido-festival .fecha {
+  color: #4CB8B3;
+  font-weight: bold;
+}
+
+.lineup {
+  background-color: #F53756;
+}
+.lineup h3, .lineup .dia {
+  color: #FFFFFF;
+}
+.lineup .dia {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  padding: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .escenarios-contenedor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
+.escenarios-contenedor .bg-amarillo {
+  background-color: #fdda00;
+}
+.escenarios-contenedor .bg-amarillo li:nth-child(odd) {
+  background-color: rgb(255, 225.0909090909, 38.8);
+}
+.escenarios-contenedor .bg-verde {
+  background-color: #4CB8B3;
+}
+.escenarios-contenedor .bg-verde li:nth-child(odd) {
+  background-color: rgb(105.2128, 195.5872, 191.4032);
+}
+.escenarios-contenedor .nombre-escenario {
+  font-weight: 900;
+  font-size: 2.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 2rem 0;
+}
+
+.calendario {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.calendario li {
+  padding: 2.5rem;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+.calendario li span {
+  font-weight: lighter;
+}
