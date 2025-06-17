@@ -523,3 +523,81 @@ body > section {
 .calendario li span {
   font-weight: lighter;
 }
+
+.contenedor-boletos {
+  background-color: #4CB8B3;
+}
+.contenedor-boletos h3, .contenedor-boletos .pase-nombre, .contenedor-boletos .pase-header p {
+  color: #FFFFFF;
+}
+
+@media (min-width: 768px) {
+  .boletos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+}
+.boletos .pase {
+  transition: transform 0.3s ease-in-out;
+}
+.boletos .pase .pase-nombre {
+  font-weight: 900;
+  font-size: 2.5rem;
+  text-align: center;
+}
+.boletos .pase .pase-header {
+  background-color: #F53756;
+}
+.boletos .pase .pase-header p {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 1.5rem;
+  margin: 0;
+}
+.boletos .pase .pase-body {
+  background-color: #FFFFFF;
+}
+.boletos .pase .pase-body ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.boletos .pase .pase-body ul li {
+  padding: 2.5rem;
+  font-size: 1.4rem;
+  border-bottom: 1px solid #e1e1e1;
+}
+.boletos .pase .pase-footer {
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+}
+.boletos .pase .pase-footer p {
+  background-color: #752F97;
+  border-radius: 10px;
+  width: 90%;
+  padding: 1rem;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 2.5rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+.boletos .pase .pase-footer p:hover {
+  background-color: rgb(56.7272727273, 22.7878787879, 73.2121212121);
+}
+.boletos .pase:hover {
+  transform: scale(1.05);
+}
+
+.footer {
+  background-color: #F53756;
+}
+.footer .titulo {
+  color: #FFFFFF;
+  font-size: 2.5rem;
+  font-weight: 100;
+  padding: 2rem;
+  margin: 0;
+}
