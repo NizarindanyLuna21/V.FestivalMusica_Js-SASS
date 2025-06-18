@@ -1,0 +1,68 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.galeria {
+    background-color: v.$amarillo;
+    h3 {
+        color: v.$blanco;
+    }
+    &-imagenes {
+        display: grid;
+        gap: 2rem 1rem;
+        
+        @include m.tablet {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+        @include m.desktop {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        img {
+            height: 20rem;
+            object-fit: cover;
+        }
+    }
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(v.$negro, 0.5);
+    display: grid;
+    place-items: center;
+    
+    animation: fadeIn ease-in-out .7s;
+
+    &.fade-out {
+        animation: fadeOut ease-in-out .7s;
+    }
+    img {
+        width: 60%;
+    }
+    p {
+        background-color: v.$blanco;
+        padding: 1.5rem 2.5rem;
+        border-radius: 5rem;
+        font-weight: bold;
+    }
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
